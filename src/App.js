@@ -15,6 +15,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Create from './Components/create';
+import Read from './Components/read';
 
 class App extends Component {
 
@@ -28,8 +30,8 @@ class App extends Component {
     <Navbar.Brand href="/">Navbar</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/header">Header</Nav.Link>
-      <Nav.Link href="/footer">Footer</Nav.Link>
+      <Nav.Link href="/create">Create</Nav.Link>
+      <Nav.Link href="/read">Read</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
@@ -37,8 +39,8 @@ class App extends Component {
         <Switch>
           {/* Exact keyword is needed for exact path */}
           <Route path='/' component={Content} exact></Route> 
-          <Route path='/header'  component={Header} exact></Route>
-          <Route path='/footer'  component={Footer} exact></Route>
+          <Route path='/create'  component={Create} exact></Route>
+          <Route path='/read'  component={Read} exact></Route>
         </Switch>
       </div>
       </Router>
